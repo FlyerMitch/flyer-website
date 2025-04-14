@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Company Name</title>
+    <title>Flyer AI</title>
     <style>
         * {
             margin: 0;
@@ -12,288 +12,70 @@
             font-family: 'Arial', sans-serif;
         }
 
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --text-color: #1f2937;
-            --light-bg: #f3f4f6;
-        }
-
         body {
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+            padding: 2rem;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
+        .content {
             text-align: center;
-            color: white;
-            padding-top: 80px;
-        }
-
-        .hero-content {
             max-width: 800px;
-            margin: 0 auto;
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
+        .company-name {
+            font-size: 4rem;
+            color: #2563eb;
             margin-bottom: 1rem;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        .vision {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 3rem;
         }
 
-        .cta-button {
+        .description {
+            color: #1f2937;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+
+        .description p {
+            margin-bottom: 1.5rem;
+        }
+
+        .apply-button {
             display: inline-block;
             padding: 1rem 2rem;
-            background-color: white;
-            color: var(--primary-color);
+            background-color: #2563eb;
+            color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: transform 0.3s;
+            font-size: 1.1rem;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-        }
-
-        /* About Section */
-        .about {
-            padding: 5rem 0;
-            background-color: var(--light-bg);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-        }
-
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5rem 0;
-            background-color: var(--light-bg);
-        }
-
-        .contact h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .contact-item {
-            padding: 2rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
+        .apply-button:hover {
+            transform: translateY(-2px);
+            background-color: #1e40af;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Your Company</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content container">
-            <h1>Welcome to Your Company</h1>
-            <p>We provide innovative solutions to help your business grow and succeed in the digital age.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+    <div class="content">
+        <h1 class="company-name">Flyer AI</h1>
+        <p class="vision">We build time machines.</p>
+        <div class="description">
+            <p>We're reclaiming humanity's most precious resource by revolutionising how the world moves - opening the skies for all with autonomous aviation. Our first mission: transform small package delivery - landing groceries, takeaways, and online deliveries directly to customers doorsteps - fast, cheap and carbon-free.</p>
+            <p>Autonomy is reshaping society, aviation included, and we're at the leading edge. We're not here to tweak the status quo - we're going to redefine it. We demand engineers who own their craft, question everything, think critically, stay humble, and see simplicity as the ultimate sophistication. Join us to change the world, one flying robot at a time.</p>
         </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div>
-                    <h2>About Us</h2>
-                    <p>We are a dedicated team of professionals committed to delivering exceptional results. With years of experience and a passion for innovation, we help businesses transform their ideas into reality.</p>
-                    <p>Our mission is to provide high-quality services that drive growth and create lasting value for our clients.</p>
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/600x400" alt="About Us" style="width: 100%; border-radius: 10px;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Service 1</h3>
-                    <p>Comprehensive solutions tailored to your specific needs, ensuring optimal results and maximum efficiency.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Service 2</h3>
-                    <p>Expert guidance and support to help you navigate complex challenges and achieve your business goals.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Service 3</h3>
-                    <p>Innovative approaches and cutting-edge technology to keep you ahead of the competition.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p>info@yourcompany.com</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <p>+1 (123) 456-7890</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Address</h3>
-                    <p>123 Business Street<br>City, State 12345</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
+        <a href="https://www.linkedin.com/jobs/view/4208200185/" class="apply-button" target="_blank">Apply Here</a>
+    </div>
 </body>
 </html>
